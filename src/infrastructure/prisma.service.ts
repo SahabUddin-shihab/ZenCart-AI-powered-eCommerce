@@ -27,6 +27,18 @@ export class PrismaService extends PrismaClient implements OnModuleInit, OnModul
         this.logger.log('Database Disconnected');
     }
 
-
+    async cleanDatabase() {
+    if (process.env.APP_ENV !== 'test') {
+      throw new Error('cleanDatabase only allowed in test environment');
+    }
+    const tablenames = await this.$queryRaw<Array<{ tablename: string }>>`
+      SELECT tablename FROM pg_tables WHERE schemaname='public'
+    `;
+    for (const { tablename } of tablenames) {
+      if (tablename !== '_prisma_migrations') {
+        await this.$executeRawUnsafe(`TRUNCATE TABLE "public"."${tablename}" CASCADE;`);
+      }
+    }
+  }
 
 }
