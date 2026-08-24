@@ -17,17 +17,17 @@ export class PrismaService extends PrismaClient implements OnModuleInit, OnModul
         })
     }
 
-    async onModuleInit() {
+  async onModuleInit() {
         await this.$connect();
         this.logger.log('Database Connected!!')
     }
 
-    async onModuleDestroy() {
+  async onModuleDestroy() {
         await this.$disconnect();
         this.logger.log('Database Disconnected');
     }
 
-    async cleanDatabase() {
+  async cleanDatabase() {
     if (process.env.APP_ENV !== 'test') {
       throw new Error('cleanDatabase only allowed in test environment');
     }
