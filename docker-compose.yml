@@ -1,0 +1,65 @@
+version: '3.8'
+
+services:
+  # ── PostgreSQL ───────────────────────────────────────────────────────────
+  postgres:
+    image: postgres:16-alpine
+    container_name: aiecom-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: aiecom
+      POSTGRES_PASSWORD: aiecom_secure_pass
+      POSTGRES_DB: aiecom
+    ports:
+      - '5432:5432'
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - aiecom-network
+    healthcheck:
+      test: ['CMD-SHELL', 'pg_isready -U aiecom -d aiecom']
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # ── Redis ────────────────────────────────────────────────────────────────
+  redis:
+    image: redis:7-alpine
+    container_name: aiecom-redis
+    restart: unless-stopped
+    ports:
+      - '6379:6379'
+    volumes:
+      - redis_data:/data
+    command: redis-server --appendonly yes
+    networks:
+      - aiecom-network
+    healthcheck:
+      test: ['CMD', 'redis-cli', 'ping']
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # ── Meilisearch ─────────────────────────────────────────────────────────
+  meilisearch:
+    image: getmeili/meilisearch:v1.6
+    container_name: aiecom-meilisearch
+    restart: unless-stopped
+    ports:
+      - '7700:7700'
+    environment:
+      MEILI_MASTER_KEY: masterKey
+      MEILI_ENV: production
+    volumes:
+      - meilisearch_data:/meili_data
+    networks:
+      - aiecom-network
+
+volumes:
+  postgres_data:
+  redis_data:
+  meilisearch_data:
+
+networks:
+  aiecom-network:
+    driver: bridge
