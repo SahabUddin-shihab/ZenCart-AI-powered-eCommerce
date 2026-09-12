@@ -11,7 +11,7 @@ import { StorageModule } from './infrastructure/storage/storage.module';
 
 // Feature Modules
 import { AuthModule } from './modules/auth/auth.module';
-
+import { CategoriesModule } from './modules/categories/categories.module';
 
 @Module({
   imports: [
@@ -30,6 +30,7 @@ import { AuthModule } from './modules/auth/auth.module';
 
     // Feature Modules
     AuthModule,
+    CategoriesModule
     
   ],
 })
