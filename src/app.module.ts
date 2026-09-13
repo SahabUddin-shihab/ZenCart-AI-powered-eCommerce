@@ -13,6 +13,7 @@ import { StorageModule } from './infrastructure/storage/storage.module';
 import { AuthModule } from './modules/auth/auth.module';
 import { CategoriesModule } from './modules/categories/categories.module';
 import { BrandsModule } from './shared/brands/brands.module';
+import { ProductsModule } from './modules/products/products.module';
 
 @Module({
   imports: [
@@ -32,7 +33,8 @@ import { BrandsModule } from './shared/brands/brands.module';
     // Feature Modules
     AuthModule,
     CategoriesModule,
-    BrandsModule
+    BrandsModule,
+    ProductsModule
     
   ],
 })
