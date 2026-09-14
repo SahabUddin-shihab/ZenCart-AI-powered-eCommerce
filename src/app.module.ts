@@ -14,6 +14,7 @@ import { AuthModule } from './modules/auth/auth.module';
 import { CategoriesModule } from './modules/categories/categories.module';
 import { BrandsModule } from './shared/brands/brands.module';
 import { ProductsModule } from './modules/products/products.module';
+import { UsersModule } from './modules/users/users.module';
 
 @Module({
   imports: [
@@ -34,7 +35,8 @@ import { ProductsModule } from './modules/products/products.module';
     AuthModule,
     CategoriesModule,
     BrandsModule,
-    ProductsModule
+    ProductsModule,
+    UsersModule
     
   ],
 })
