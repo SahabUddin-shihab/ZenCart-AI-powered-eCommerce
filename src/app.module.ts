@@ -20,6 +20,7 @@ import { VendorsModule } from './modules/vendors/vendors.module';
 import { InventoryModule } from './modules/inventory/inventory.module';
 import { CouponsModule } from './modules/coupons/coupons.module';
 import { CampaignsModule } from './modules/campaigns/campaigns.module';
+import { AiModule } from './modules/ai/ai.module';
 
 @Module({
   imports: [
@@ -46,7 +47,8 @@ import { CampaignsModule } from './modules/campaigns/campaigns.module';
     VendorsModule,
     InventoryModule,
     CouponsModule,
-    CampaignsModule
+    CampaignsModule,
+    AiModule
     
   ],
 })
