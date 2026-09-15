@@ -5,7 +5,7 @@ import {
 import { FileInterceptor } from '@nestjs/platform-express';
 import { ApiTags, ApiOperation, ApiBearerAuth, ApiConsumes } from '@nestjs/swagger';
 import { VendorsService } from './vendors.service';
-
+import { VendorAnalyticsService } from './vendor-analytics.service';
 import { CreateVendorDto } from './dto/create-vendor.dto';
 import { UpdateVendorDto } from './dto/update-vendor.dto';
 import { PaginationDto } from '../../common/dto/pagination.dto';
@@ -21,6 +21,7 @@ import { CurrentUser } from '../../common/decorators/current-user.decorator';
 export class VendorsController {
   constructor(
     private readonly vendorsService: VendorsService,
+    private readonly analyticsService: VendorAnalyticsService,
   ) {}
 
   @Post()
@@ -58,8 +59,32 @@ export class VendorsController {
     return this.vendorsService.getVendorByUserId(userId);
   }
 
- 
+  @Get('my/dashboard')
+  @UseGuards(RolesGuard)
+  @Roles('VENDOR')
+  @ApiOperation({ summary: 'Vendor dashboard stats' })
+  async getDashboard(@CurrentUser() user: any) {
+    const vendor = await this.vendorsService.getVendorByUserId(user.id);
+    return this.analyticsService.getDashboardStats(vendor.id);
+  }
 
+  @Get('my/analytics/sales')
+  @UseGuards(RolesGuard)
+  @Roles('VENDOR')
+  @ApiOperation({ summary: 'Vendor sales chart' })
+  async getSalesChart(@CurrentUser() user: any, @Query('period') period: any) {
+    const vendor = await this.vendorsService.getVendorByUserId(user.id);
+    return this.analyticsService.getSalesChart(vendor.id, period);
+  }
+
+  @Get('my/analytics/top-products')
+  @UseGuards(RolesGuard)
+  @Roles('VENDOR')
+  @ApiOperation({ summary: 'Vendor top products' })
+  async getTopProducts(@CurrentUser() user: any) {
+    const vendor = await this.vendorsService.getVendorByUserId(user.id);
+    return this.analyticsService.getTopProducts(vendor.id);
+  }
 
 
 
