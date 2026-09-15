@@ -18,6 +18,7 @@ import { UsersModule } from './modules/users/users.module';
 import { OrdersModule } from './modules/orders/orders.module';
 import { VendorsModule } from './modules/vendors/vendors.module';
 import { InventoryModule } from './modules/inventory/inventory.module';
+import { CouponsModule } from './modules/coupons/coupons.module';
 
 @Module({
   imports: [
@@ -42,7 +43,8 @@ import { InventoryModule } from './modules/inventory/inventory.module';
     UsersModule,
     OrdersModule,
     VendorsModule,
-    InventoryModule
+    InventoryModule,
+    CouponsModule
     
   ],
 })
