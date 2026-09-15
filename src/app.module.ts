@@ -19,6 +19,7 @@ import { OrdersModule } from './modules/orders/orders.module';
 import { VendorsModule } from './modules/vendors/vendors.module';
 import { InventoryModule } from './modules/inventory/inventory.module';
 import { CouponsModule } from './modules/coupons/coupons.module';
+import { CampaignsModule } from './modules/campaigns/campaigns.module';
 
 @Module({
   imports: [
@@ -44,7 +45,8 @@ import { CouponsModule } from './modules/coupons/coupons.module';
     OrdersModule,
     VendorsModule,
     InventoryModule,
-    CouponsModule
+    CouponsModule,
+    CampaignsModule
     
   ],
 })
