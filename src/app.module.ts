@@ -21,6 +21,7 @@ import { InventoryModule } from './modules/inventory/inventory.module';
 import { CouponsModule } from './modules/coupons/coupons.module';
 import { CampaignsModule } from './modules/campaigns/campaigns.module';
 import { AiModule } from './modules/ai/ai.module';
+import { DynamicPricingModule } from './modules/dynamic-pricing/dynamic-pricing.module';
 
 @Module({
   imports: [
@@ -48,7 +49,8 @@ import { AiModule } from './modules/ai/ai.module';
     InventoryModule,
     CouponsModule,
     CampaignsModule,
-    AiModule
+    AiModule,
+    DynamicPricingModule
     
   ],
 })
