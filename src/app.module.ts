@@ -24,6 +24,7 @@ import { AiModule } from './modules/ai/ai.module';
 import { DynamicPricingModule } from './modules/dynamic-pricing/dynamic-pricing.module';
 import { TaxationModule } from './modules/taxation/taxation.module';
 import { ShippingModule } from './modules/shipping/shipping.module';
+import { FraudDetectionModule } from './modules/fraud-detection/fraud-detection.module';
 
 @Module({
   imports: [
@@ -54,7 +55,8 @@ import { ShippingModule } from './modules/shipping/shipping.module';
     AiModule,
     DynamicPricingModule,
     TaxationModule,
-    ShippingModule
+    ShippingModule,
+    FraudDetectionModule
     
   ],
 })
