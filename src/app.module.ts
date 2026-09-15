@@ -22,6 +22,7 @@ import { CouponsModule } from './modules/coupons/coupons.module';
 import { CampaignsModule } from './modules/campaigns/campaigns.module';
 import { AiModule } from './modules/ai/ai.module';
 import { DynamicPricingModule } from './modules/dynamic-pricing/dynamic-pricing.module';
+import { TaxationModule } from './modules/taxation/taxation.module';
 
 @Module({
   imports: [
@@ -50,7 +51,8 @@ import { DynamicPricingModule } from './modules/dynamic-pricing/dynamic-pricing.
     CouponsModule,
     CampaignsModule,
     AiModule,
-    DynamicPricingModule
+    DynamicPricingModule,
+    TaxationModule
     
   ],
 })
