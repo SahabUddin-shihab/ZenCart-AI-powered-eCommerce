@@ -6,6 +6,7 @@ import { FileInterceptor } from '@nestjs/platform-express';
 import { ApiTags, ApiOperation, ApiBearerAuth, ApiConsumes } from '@nestjs/swagger';
 import { VendorsService } from './vendors.service';
 import { VendorAnalyticsService } from './vendor-analytics.service';
+import { VendorOnboardingService } from './vendor-onboarding.service';
 import { CreateVendorDto } from './dto/create-vendor.dto';
 import { UpdateVendorDto } from './dto/update-vendor.dto';
 import { PaginationDto } from '../../common/dto/pagination.dto';
@@ -22,6 +23,7 @@ export class VendorsController {
   constructor(
     private readonly vendorsService: VendorsService,
     private readonly analyticsService: VendorAnalyticsService,
+    private readonly onboardingService: VendorOnboardingService,
   ) {}
 
   @Post()
@@ -86,7 +88,14 @@ export class VendorsController {
     return this.analyticsService.getTopProducts(vendor.id);
   }
 
-
+  @Get('my/onboarding')
+  @UseGuards(RolesGuard)
+  @Roles('VENDOR')
+  @ApiOperation({ summary: 'Vendor onboarding checklist' })
+  async getOnboarding(@CurrentUser() user: any) {
+    const vendor = await this.vendorsService.getVendorByUserId(user.id);
+    return this.onboardingService.getOnboardingStatus(vendor.id);
+  }
 
   @Get(':id')
   @UseGuards(RolesGuard)
