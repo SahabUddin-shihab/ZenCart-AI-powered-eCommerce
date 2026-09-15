@@ -16,6 +16,7 @@ import { BrandsModule } from './shared/brands/brands.module';
 import { ProductsModule } from './modules/products/products.module';
 import { UsersModule } from './modules/users/users.module';
 import { OrdersModule } from './modules/orders/orders.module';
+import { VendorsModule } from './modules/vendors/vendors.module';
 
 @Module({
   imports: [
@@ -38,7 +39,8 @@ import { OrdersModule } from './modules/orders/orders.module';
     BrandsModule,
     ProductsModule,
     UsersModule,
-    OrdersModule
+    OrdersModule,
+    VendorsModule
     
   ],
 })
