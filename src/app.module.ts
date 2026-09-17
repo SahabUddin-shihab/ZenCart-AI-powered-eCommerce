@@ -26,6 +26,7 @@ import { TaxationModule } from './modules/taxation/taxation.module';
 import { ShippingModule } from './modules/shipping/shipping.module';
 import { FraudDetectionModule } from './modules/fraud-detection/fraud-detection.module';
 import { CheckoutModule } from './modules/checkout/checkout.module';
+import { SearchModule } from '@infrastructure/search/search.module';
 
 @Module({
   imports: [
@@ -40,6 +41,7 @@ import { CheckoutModule } from './modules/checkout/checkout.module';
     CacheInfraModule,
     QueueModule,
     StorageModule,
+    SearchModule,
 
 
     // Feature Modules
