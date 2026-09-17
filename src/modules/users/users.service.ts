@@ -117,7 +117,7 @@ export class UsersService {
   async changePassword(userId: string, currentPassword: string, newPassword: string) {
     const user = await this.prisma.user.findUnique({ where: { id: userId } });
     if (!user?.passwordHash) throw new BadRequestException('No password set');
-    const { comparePassword } = await import('../../shared/utils/hash.util');
+    const { comparePassword } = await import('../../shared/utils/hash.util.js');
     const valid = await comparePassword(currentPassword, user.passwordHash);
     if (!valid) throw new BadRequestException('Current password is incorrect');
     const passwordHash = await hashPassword(newPassword);
