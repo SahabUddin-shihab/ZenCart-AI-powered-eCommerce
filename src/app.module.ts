@@ -28,6 +28,7 @@ import { FraudDetectionModule } from './modules/fraud-detection/fraud-detection.
 import { CheckoutModule } from './modules/checkout/checkout.module';
 import { SearchModule } from '@infrastructure/search/search.module';
 import { PaymentsModule } from '@modules/payments/payments.module';
+import { AffiliateModule } from '@modules/affiliate/affiliate.module';
 
 @Module({
   imports: [
@@ -62,7 +63,8 @@ import { PaymentsModule } from '@modules/payments/payments.module';
     ShippingModule,
     FraudDetectionModule,
     CheckoutModule,
-    PaymentsModule
+    PaymentsModule,
+    AffiliateModule
     
   ],
 })
