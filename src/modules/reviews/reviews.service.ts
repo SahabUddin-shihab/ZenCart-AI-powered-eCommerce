@@ -8,7 +8,7 @@ export class ReviewsService {
   constructor(private prisma: PrismaService, private eventEmitter: EventEmitter2) {}
 
   async create(userId: string, dto: any) {
-    // Verify purchase
+  
     const purchased = await this.prisma.orderItem.findFirst({
       where: { order: { userId, status: 'DELIVERED' }, productId: dto.productId },
     });
