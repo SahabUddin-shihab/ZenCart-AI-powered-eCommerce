@@ -45,7 +45,6 @@ export class CmsService {
     return this.prisma.page.findMany({ where, orderBy: { createdAt: 'desc' } });
   }
 
-  // ── Blocks ───────────────────────────────────────────────────────────────
 
   async getBlock(identifier: string) {
     const cacheKey = `cms:block:${identifier}`;
@@ -115,9 +114,7 @@ export class CmsService {
     await this.redis.del('cms:homepage');
     return { message: 'Block deleted' };
   }
-
-  // ── Menu ─────────────────────────────────────────────────────────────────
-
+  
   async getMenu(location: string) {
     const cacheKey = `cms:menu:${location}`;
     const cached = await this.redis.get(cacheKey);
