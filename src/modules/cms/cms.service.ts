@@ -7,7 +7,6 @@ import { generateSlug } from '../../shared/utils/string.util';
 export class CmsService {
   constructor(private prisma: PrismaService, private redis: RedisService) {}
 
-  // ── Pages ────────────────────────────────────────────────────────────────
 
   async getPage(slug: string) {
     const cacheKey = `cms:page:${slug}`;
