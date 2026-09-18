@@ -32,6 +32,7 @@ import { AffiliateModule } from '@modules/affiliate/affiliate.module';
 import { ReviewsModule } from '@modules/reviews/reviews.module';
 import { BlogsModule } from '@modules/blogs/blogs.module';
 import { CmsModule } from '@modules/cms/cms.module';
+import { SeoModule } from '@modules/seo/seo.module';
 
 @Module({
   imports: [
@@ -70,7 +71,8 @@ import { CmsModule } from '@modules/cms/cms.module';
     AffiliateModule,
     ReviewsModule,
     BlogsModule,
-    CmsModule
+    CmsModule,
+    SeoModule
     
   ],
 })
