@@ -36,6 +36,7 @@ import { SeoModule } from '@modules/seo/seo.module';
 import { PermissionsModule } from '@modules/permissions/permissions.module';
 import { AuditModule } from '@modules/audit/audit.module';
 import { AnalyticsModule } from '@modules/analytics/analytics.module';
+import { ReportsModule } from '@modules/reports/reports.module';
 
 @Module({
   imports: [
@@ -78,7 +79,8 @@ import { AnalyticsModule } from '@modules/analytics/analytics.module';
     SeoModule,
     PermissionsModule,
     AuditModule,
-    AnalyticsModule
+    AnalyticsModule,
+    ReportsModule
     
   ],
 })
