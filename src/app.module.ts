@@ -33,6 +33,7 @@ import { ReviewsModule } from '@modules/reviews/reviews.module';
 import { BlogsModule } from '@modules/blogs/blogs.module';
 import { CmsModule } from '@modules/cms/cms.module';
 import { SeoModule } from '@modules/seo/seo.module';
+import { PermissionsModule } from '@modules/permissions/permissions.module';
 
 @Module({
   imports: [
@@ -72,7 +73,8 @@ import { SeoModule } from '@modules/seo/seo.module';
     ReviewsModule,
     BlogsModule,
     CmsModule,
-    SeoModule
+    SeoModule,
+    PermissionsModule
     
   ],
 })
