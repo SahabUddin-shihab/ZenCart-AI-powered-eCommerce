@@ -35,6 +35,7 @@ import { CmsModule } from '@modules/cms/cms.module';
 import { SeoModule } from '@modules/seo/seo.module';
 import { PermissionsModule } from '@modules/permissions/permissions.module';
 import { AuditModule } from '@modules/audit/audit.module';
+import { AnalyticsModule } from '@modules/analytics/analytics.module';
 
 @Module({
   imports: [
@@ -76,7 +77,8 @@ import { AuditModule } from '@modules/audit/audit.module';
     CmsModule,
     SeoModule,
     PermissionsModule,
-    AuditModule
+    AuditModule,
+    AnalyticsModule
     
   ],
 })
