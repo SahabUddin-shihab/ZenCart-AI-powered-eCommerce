@@ -39,6 +39,7 @@ import { AnalyticsModule } from '@modules/analytics/analytics.module';
 import { ReportsModule } from '@modules/reports/reports.module';
 import { FlashSalesModule } from '@modules/flash-sales/flash-sales.module';
 import { SupportModule } from '@modules/support/support.module';
+import { ErpModule } from '@modules/erp/erp.module';
 
 @Module({
   imports: [
@@ -84,7 +85,8 @@ import { SupportModule } from '@modules/support/support.module';
     AnalyticsModule,
     ReportsModule,
     FlashSalesModule,
-    SupportModule
+    SupportModule,
+    ErpModule
     
   ],
 })
