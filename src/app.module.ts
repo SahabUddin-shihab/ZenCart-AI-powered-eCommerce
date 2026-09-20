@@ -38,6 +38,7 @@ import { AuditModule } from '@modules/audit/audit.module';
 import { AnalyticsModule } from '@modules/analytics/analytics.module';
 import { ReportsModule } from '@modules/reports/reports.module';
 import { FlashSalesModule } from '@modules/flash-sales/flash-sales.module';
+import { SupportModule } from '@modules/support/support.module';
 
 @Module({
   imports: [
@@ -82,7 +83,8 @@ import { FlashSalesModule } from '@modules/flash-sales/flash-sales.module';
     AuditModule,
     AnalyticsModule,
     ReportsModule,
-    FlashSalesModule
+    FlashSalesModule,
+    SupportModule
     
   ],
 })
