@@ -49,6 +49,8 @@ import { AutomationModule } from '@modules/automation/automation.module';
 import { WebhooksModule } from '@modules/webhooks/webhooks.module';
 import { WorkflowsModule } from '@modules/workflows/workflows.module';
 import { CommissionsModule } from '@modules/commissions/commissions.module';
+import { CartModule } from '@modules/cart/cart.module';
+import { NotificationsModule } from '@modules/notifications/notifications.module';
 
 @Module({
   imports: [
@@ -104,7 +106,9 @@ import { CommissionsModule } from '@modules/commissions/commissions.module';
     AutomationModule,
     WebhooksModule,
     WorkflowsModule,
-    CommissionsModule
+    CommissionsModule,
+    CartModule,
+    NotificationsModule
     
   ],
 })
