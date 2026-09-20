@@ -48,6 +48,7 @@ import { AbTestingModule } from '@modules/ab-testing/ab-testing.module';
 import { AutomationModule } from '@modules/automation/automation.module';
 import { WebhooksModule } from '@modules/webhooks/webhooks.module';
 import { WorkflowsModule } from '@modules/workflows/workflows.module';
+import { CommissionsModule } from '@modules/commissions/commissions.module';
 
 @Module({
   imports: [
@@ -102,7 +103,8 @@ import { WorkflowsModule } from '@modules/workflows/workflows.module';
     AbTestingModule,
     AutomationModule,
     WebhooksModule,
-    WorkflowsModule
+    WorkflowsModule,
+    CommissionsModule
     
   ],
 })
