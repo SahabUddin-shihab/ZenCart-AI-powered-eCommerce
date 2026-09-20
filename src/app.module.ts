@@ -47,6 +47,7 @@ import { FeatureFlagsModule } from '@modules/feature-flags/featureflags.module';
 import { AbTestingModule } from '@modules/ab-testing/ab-testing.module';
 import { AutomationModule } from '@modules/automation/automation.module';
 import { WebhooksModule } from '@modules/webhooks/webhooks.module';
+import { WorkflowsModule } from '@modules/workflows/workflows.module';
 
 @Module({
   imports: [
@@ -100,7 +101,8 @@ import { WebhooksModule } from '@modules/webhooks/webhooks.module';
     FeatureFlagsModule,
     AbTestingModule,
     AutomationModule,
-    WebhooksModule
+    WebhooksModule,
+    WorkflowsModule
     
   ],
 })
