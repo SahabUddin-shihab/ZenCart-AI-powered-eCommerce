@@ -46,6 +46,7 @@ import { LoyaltyModule } from '@modules/loyalty/loyalty.module';
 import { FeatureFlagsModule } from '@modules/feature-flags/featureflags.module';
 import { AbTestingModule } from '@modules/ab-testing/ab-testing.module';
 import { AutomationModule } from '@modules/automation/automation.module';
+import { WebhooksModule } from '@modules/webhooks/webhooks.module';
 
 @Module({
   imports: [
@@ -98,7 +99,8 @@ import { AutomationModule } from '@modules/automation/automation.module';
     LoyaltyModule,
     FeatureFlagsModule,
     AbTestingModule,
-    AutomationModule
+    AutomationModule,
+    WebhooksModule
     
   ],
 })
