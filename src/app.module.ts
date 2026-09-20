@@ -42,6 +42,7 @@ import { SupportModule } from '@modules/support/support.module';
 import { ErpModule } from '@modules/erp/erp.module';
 import { WarehouseModule } from '@modules/warehouse/warehouse.module';
 import { InfluencerModule } from '@modules/influencer/influencer.module';
+import { LoyaltyModule } from '@modules/loyalty/loyalty.module';
 
 @Module({
   imports: [
@@ -90,7 +91,8 @@ import { InfluencerModule } from '@modules/influencer/influencer.module';
     SupportModule,
     ErpModule,
     WarehouseModule,
-    InfluencerModule
+    InfluencerModule,
+    LoyaltyModule
     
   ],
 })
