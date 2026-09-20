@@ -43,6 +43,7 @@ import { ErpModule } from '@modules/erp/erp.module';
 import { WarehouseModule } from '@modules/warehouse/warehouse.module';
 import { InfluencerModule } from '@modules/influencer/influencer.module';
 import { LoyaltyModule } from '@modules/loyalty/loyalty.module';
+import { FeatureFlagsModule } from '@modules/feature-flags/featureflags.module';
 
 @Module({
   imports: [
@@ -92,7 +93,8 @@ import { LoyaltyModule } from '@modules/loyalty/loyalty.module';
     ErpModule,
     WarehouseModule,
     InfluencerModule,
-    LoyaltyModule
+    LoyaltyModule,
+    FeatureFlagsModule
     
   ],
 })
