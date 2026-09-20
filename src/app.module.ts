@@ -51,6 +51,8 @@ import { WorkflowsModule } from '@modules/workflows/workflows.module';
 import { CommissionsModule } from '@modules/commissions/commissions.module';
 import { CartModule } from '@modules/cart/cart.module';
 import { NotificationsModule } from '@modules/notifications/notifications.module';
+import { MediaModule } from '@modules/media/media.module';
+import { LocalizationModule } from '@modules/localization/localization.module';
 
 @Module({
   imports: [
@@ -108,7 +110,10 @@ import { NotificationsModule } from '@modules/notifications/notifications.module
     WorkflowsModule,
     CommissionsModule,
     CartModule,
-    NotificationsModule
+    NotificationsModule,
+    MediaModule,
+    LocalizationModule,
+    
     
   ],
 })
