@@ -45,6 +45,7 @@ import { InfluencerModule } from '@modules/influencer/influencer.module';
 import { LoyaltyModule } from '@modules/loyalty/loyalty.module';
 import { FeatureFlagsModule } from '@modules/feature-flags/featureflags.module';
 import { AbTestingModule } from '@modules/ab-testing/ab-testing.module';
+import { AutomationModule } from '@modules/automation/automation.module';
 
 @Module({
   imports: [
@@ -96,7 +97,8 @@ import { AbTestingModule } from '@modules/ab-testing/ab-testing.module';
     InfluencerModule,
     LoyaltyModule,
     FeatureFlagsModule,
-    AbTestingModule
+    AbTestingModule,
+    AutomationModule
     
   ],
 })
