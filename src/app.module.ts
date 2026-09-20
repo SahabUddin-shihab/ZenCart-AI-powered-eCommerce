@@ -53,6 +53,9 @@ import { CartModule } from '@modules/cart/cart.module';
 import { NotificationsModule } from '@modules/notifications/notifications.module';
 import { MediaModule } from '@modules/media/media.module';
 import { LocalizationModule } from '@modules/localization/localization.module';
+import { WalletsModule } from '@modules/wallets/wallets.module';
+import { SubscriptionsModule } from '@modules/subscriptions/subscriptions.module';
+import { RecommendationsModule } from '@modules/recommendations/recommendations.module';
 
 @Module({
   imports: [
@@ -113,7 +116,9 @@ import { LocalizationModule } from '@modules/localization/localization.module';
     NotificationsModule,
     MediaModule,
     LocalizationModule,
-    
+    WalletsModule,
+    SubscriptionsModule,
+    RecommendationsModule
     
   ],
 })
