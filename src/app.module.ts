@@ -37,6 +37,7 @@ import { PermissionsModule } from '@modules/permissions/permissions.module';
 import { AuditModule } from '@modules/audit/audit.module';
 import { AnalyticsModule } from '@modules/analytics/analytics.module';
 import { ReportsModule } from '@modules/reports/reports.module';
+import { FlashSalesModule } from '@modules/flash-sales/flash-sales.module';
 
 @Module({
   imports: [
@@ -80,7 +81,8 @@ import { ReportsModule } from '@modules/reports/reports.module';
     PermissionsModule,
     AuditModule,
     AnalyticsModule,
-    ReportsModule
+    ReportsModule,
+    FlashSalesModule
     
   ],
 })
