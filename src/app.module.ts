@@ -44,6 +44,7 @@ import { WarehouseModule } from '@modules/warehouse/warehouse.module';
 import { InfluencerModule } from '@modules/influencer/influencer.module';
 import { LoyaltyModule } from '@modules/loyalty/loyalty.module';
 import { FeatureFlagsModule } from '@modules/feature-flags/featureflags.module';
+import { AbTestingModule } from '@modules/ab-testing/ab-testing.module';
 
 @Module({
   imports: [
@@ -94,7 +95,8 @@ import { FeatureFlagsModule } from '@modules/feature-flags/featureflags.module';
     WarehouseModule,
     InfluencerModule,
     LoyaltyModule,
-    FeatureFlagsModule
+    FeatureFlagsModule,
+    AbTestingModule
     
   ],
 })
