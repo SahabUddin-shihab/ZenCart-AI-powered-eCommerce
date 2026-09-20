@@ -63,7 +63,7 @@ import { WorkflowsModule } from '@modules/workflows/workflows.module';
     QueueModule,
     StorageModule,
     SearchModule,
-
+    StorageModule,
 
     // Feature Modules
     AuthModule,
