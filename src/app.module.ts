@@ -40,6 +40,7 @@ import { ReportsModule } from '@modules/reports/reports.module';
 import { FlashSalesModule } from '@modules/flash-sales/flash-sales.module';
 import { SupportModule } from '@modules/support/support.module';
 import { ErpModule } from '@modules/erp/erp.module';
+import { WarehouseModule } from '@modules/warehouse/warehouse.module';
 
 @Module({
   imports: [
@@ -86,7 +87,8 @@ import { ErpModule } from '@modules/erp/erp.module';
     ReportsModule,
     FlashSalesModule,
     SupportModule,
-    ErpModule
+    ErpModule,
+    WarehouseModule
     
   ],
 })
