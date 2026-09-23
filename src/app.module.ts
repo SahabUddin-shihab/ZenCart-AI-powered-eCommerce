@@ -57,6 +57,7 @@ import { WalletsModule } from '@modules/wallets/wallets.module';
 import { SubscriptionsModule } from '@modules/subscriptions/subscriptions.module';
 import { RecommendationsModule } from '@modules/recommendations/recommendations.module';
 
+
 @Module({
   imports: [
     // Config
@@ -118,7 +119,8 @@ import { RecommendationsModule } from '@modules/recommendations/recommendations.
     LocalizationModule,
     WalletsModule,
     SubscriptionsModule,
-    RecommendationsModule
+    RecommendationsModule,
+    RealtimeModu
     
   ],
 })
